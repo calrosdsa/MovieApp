@@ -23,7 +23,6 @@ class DefaultAppContent(
     private val circuit: Circuit
 ):AppContent {
 
-//    @OptIn(ExperimentalMaterial3WindowSizeClassApi::class, ExperimentalCoilApi::class)
     @Composable
     override fun Content(
     backstack: SaveableBackStack,

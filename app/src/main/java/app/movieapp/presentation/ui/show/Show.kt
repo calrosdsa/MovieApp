@@ -227,11 +227,11 @@ private fun InfoPanels(
     show: MovieDetailDto,
     modifier: Modifier = Modifier,
 ) {
+    val itemMod = Modifier.padding(bottom = 10.dp)
     FlowRow(
         horizontalArrangement = Arrangement.spacedBy(5.dp),
         modifier = modifier,
     ) {
-        val itemMod = Modifier.padding(bottom = 10.dp)
 
             TraktRatingInfoPanel(
                 rating = show.vote_average.toFloat(),

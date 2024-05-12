@@ -80,7 +80,4 @@ interface NetworkComponent {
         return tmdbManager.getLatestImageProvider()
     }
 
-//    @Provides
-//    @IntoSet
-//    fun provideTmdbInitializer(bind: TmdbInitializer): AppInitializer = bind
 }

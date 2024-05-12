@@ -33,9 +33,6 @@ class MainActivity : ComponentActivity() {
         val component = AndroidActivityComponent::class.create(this, applicationComponent)
         enableEdgeToEdge()
         lifecycleScope.launch {
-//        val res = tmdb3.movies.popular(1,"en")
-//            Log.d("DebugApp",res.results.toString())
-//        }
         setContent {
             val backstack = rememberSaveableBackStack(listOf(DiscoverScreen))
             val navigator = rememberCircuitNavigator(backstack)
@@ -44,37 +41,11 @@ class MainActivity : ComponentActivity() {
                 navigator = navigator,
                 modifier = Modifier
             )
-//            {
-//
-//            }
-//            MovieAppTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "Android",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
         }
     }
 }
     }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    MovieAppTheme {
-        Greeting("Android")
-    }
-}
 
 private fun AndroidApplicationComponent.Companion.from(context: Context): AndroidApplicationComponent {
     return (context.applicationContext as AppApplication).component

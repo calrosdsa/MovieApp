@@ -14,13 +14,6 @@ interface UiComponent:
     RootUiComponent
 {
 
-//    @Provides
-//    @ActivityScope
-//    fun provideLyricist(): TiviStrings = Lyricist(
-//        defaultLanguageTag = Locales.EN,
-//        translations = Strings,
-//    ).strings
-
     @Provides
     @ActivityScope
     fun provideCircuit(

@@ -19,10 +19,5 @@ data class ShowUiState(
 sealed interface ShowUiEvent : CircuitUiEvent {
     data class Refresh(val fromUser: Boolean = false) : ShowUiEvent
     data object NavigateUp:ShowUiEvent
-//    data class ClearMessage(val id: Long) : ShowUiEvent
-//    object OpenAccount : ShowUiEvent
-//    object OpenPopularShows : ShowUiEvent
-//    object OpenRecommendedShows : ShowUiEvent
-//    object OpenTrendingShows : ShowUiEvent
     data class OpenShowDetails(val showId: Long) : ShowUiEvent
 }
